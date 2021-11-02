@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Default_Tag&CSS</title>
+  <link rel="stylesheet" href="../css/Default_Tag&CSS.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <ul>
+      <li><a href="homepage.html">homepage</a></li>
+    </ul>
+  </header>
+
+  <div class="main">
+
+    <div class="title">
+      <h1>RSによる対応を想定するHTML要素とCSSプロパティ</h1>
+    </div>
+
+    <div class="explain chapter">
+      <p>電子書籍は、Reading System(RS)によってepubファイルを解析し表現されるものです。<br>
+        このRSはAmazon Kindle, AppleBooks, Rakuten Koboであったりしますが、
+        epubファイルを読み込むと電子書籍らしい表現をする機能を持ったアプリケーションです。
+        このRSはepubファイル内の全てのhtmlタグおよびCSSプロパティを解釈できるわけではなく、
+        したがってすべてのRSが対応できるHTMLタグ及びCSSプロパティをepub作成側で規定する必要があります。
+        以下がその規定に当たるもので、基本的にその規定から外れたタグ及びプロパティをファイル内に記述してはいけません。</p>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="html chapter">
+      <div class="caption">【HTML】</div>
+      <div class="content">
+        <p class="komidashi">ルート要素</p>
+        <p class="text">html要素</p>
+        <p class="komidashi">ドキュメントのメタデータ</p>
+        <p class="text">head要素 / title要素 / link要素 / meta要素 / style要素</p>
+        <p class="komidashi">セクション</p>
+        <p class="text">body要素 / h1～h6要素 / nav要素（ナビゲーション文書用にしか想定しない）</p>
+        <p class="komidashi">コンテンツのグループ化</p>
+        <p class="text">div要素 / p要素 / hr要素<br>
+          ol要素（ナビゲーション文書用にしか想定しない）/ li要素（ナビゲーション文書用にしか想定しない）</p>
+        <p class="komidashi">テキストレベルの意味づけ</p>
+        <p class="text">a要素 / br要素 / ruby要素 / rt要素 / span要素</p>
+        <p class="komidashi">組込コンテンツ</p>
+        <p class="text">img要素 / SVG（固定レイアウトにおけるSVGラッピング手法とイメージマップ機能のみ）</p>
+      </div>
+    </div>
+
+    <div class="html chapter">
+      <div class="caption">【CSS】</div>
+      <div class="content">
+        <p class="komidashi">値</p>
+        <p class="text">% / px / em / inherit / #RRGGBB / #RGB / rgb(R,G,B) / 色名（17色） / transparent</p>
+        <p class="komidashi">セレクタ</p>
+        <p class="text">タイプセレクタ「ELEMENT」</p>
+        <p class="text">ユニバーサルセレクタ「*」</p>
+        <p class="text">クラスセレクタ「.class」</p>
+        <p class="text attribute">複数クラスの同時指定「class="class class class ..."」<br>複数クラスの組み合わせ指定「.class.class」</p>
+        <p class="text">IDセレクタ「#id」</p>
+        <p class="text">属性セレクタ</p>
+        <p class="text attribute">[att] / [att="val"] / [att~="val"] / [att|="val"]</p>
+        <p class="text">結合子</p>
+        <p class="text attribute">子孫セレクタ「A B」 / 子セレクタ「A &gt; B」 / 兄弟セレクタ（隣接セレクタ）「A + B」</p>
+        <p class="text">グループ化「A, B」</p>
+        <p class="text">疑似要素</p>
+        <p class="text attribute">:link / :visited / :active / :hover（※マウス操作可能な RS のみ）</p>
+        <p class="text">!important 宣言</p>
+        <p class="komidashi">@ルール</p>
+        <p class="text">@charset / @font-face / @import / @media</p>
+        <p class="komidashi">色・背景</p>
+        <p class="text">color / background（色のみ） / background-color</p>
+        <p class="komidashi">マージン</p>
+        <p class="text">margin / margin-top / margin-right / margin-bottom / margin-left</p>
+        <p class="komidashi">パディング</p>
+        <p class="text">padding / padding-top / padding-right / padding-bottom / padding-left</p>
+        <p class="komidashi">ボーダー</p>
+        <p class="text">border / border-top / border-right / border-bottom / border-left</p>
+        <p class="text">border-width / border-top-width / border-right-width / border-bottom-width / border-left-width</p>
+        <p class="text">border-style / border-top-style / border-right-style / border-bottom-style / border-left-style</p>
+        <p class="text">border-color / border-top-color / border-right-color / border-bottom-color / border-left-color</p>
+        <p class="komidashi">フォント</p>
+        <p class="text">font / font-family / font-size / font-style / font-weight / line-height</p>
+        <p class="komidashi">テキスト</p>
+        <p class="text">text-align / text-decoration / text-indent / letter-spacing / vertical-align / word-wrap</p>
+        <p class="komidashi">幅・高さ</p>
+        <p class="text">width / height / max-width / max-height</p>
+        <p class="komidashi">表示</p>
+        <p class="text">display (display: block; / display: inline-block; / display: inline; / display: none;)</p>
+        <p class="komidashi">ページメディア</p>
+        <p class="text">page-break-before / page-break-after / page-break-inside</p>
+        <p class="komidashi">CSS Text Level 3</p>
+        <p class="text">-epub-line-break / -epub-word-break / -epub-text-align-last</p>
+        <p class="komidashi">CSS Writing Modes Module Level 3</p>
+        <p class="text">-epub-writing-mode / -epub-text-orientation / -epub-text-combine / -epub-text-combine-horizontal</p>
+        <p class="komidashi">CSS Fonts Level 3</p>
+        <p class="text">@font-face (font-family / font-style / font-weight / src / unicode-range)</p>
+        <p class="komidashi">CSS Text Decoration Level 3</p>
+        <p class="text">-epub-text-emphasis / -epub-text-emphasis-color / -epub-text-emphasis-style / -epub-text-underline-position</p>
+
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

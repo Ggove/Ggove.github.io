@@ -128,7 +128,6 @@ header img{
 
 .list ul{
   align-items: center;
-  margin-left: 1rem;
 }
 
 .list li:not(:last-child){

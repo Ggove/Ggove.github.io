@@ -1,0 +1,29 @@
+@import url("sanitize.css");
+
+/* title */
+.title{
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* main */
+
+.main_homepage .chapter{
+  border: 5px double rgb(230, 226, 23);
+  width: 90%;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.main_homepage .chapter .link{
+  text-align: right;
+}
+
+footer .line{
+  border: 1rem solid rgb(11, 5, 94);
+}
+
+footer p{
+  margin: 1rem;
+  color: #aaa;
+}
